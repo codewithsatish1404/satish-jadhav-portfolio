@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler custom-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-lg-4 gap-3 text-center">
+        <li class="nav-item" *ngFor="let link of navLinks">
+          <a
+            class="nav-link px-3 py-2 text-white"
+            href="javascript:void(0)"
+            (click)="scrollToSection(link.sectionId)"
+          >
+            {{ link.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

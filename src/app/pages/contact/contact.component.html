@@ -1,0 +1,54 @@
+<!-- Button to open the popup -->
+<button class="btn btn-lg glow-btn" (click)="openModal()">Get in Touch</button>
+
+<!-- Enquiry Form Popup -->
+<div class="popup-overlay" *ngIf="showModal">
+  <div class="popup-form">
+    <button class="close-btn" (click)="closeModal()">&times;</button>
+
+    <h2 class="text-white mb-4 text-center">Enquiry Form</h2>
+    <form (ngSubmit)="sendEmail()" #contactForm="ngForm">
+      <div class="form-floating mb-3">
+        <input type="text" id="name" class="form-control glow-input"
+               placeholder="Your Name" required [(ngModel)]="formData.name" name="name" />
+        <label for="name">Your Name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="email" id="email" class="form-control glow-input"
+               placeholder="Email Address" required [(ngModel)]="formData.email" name="email" />
+        <label for="email">Email Address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" id="subject" class="form-control glow-input"
+               placeholder="Subject" required [(ngModel)]="formData.subject" name="subject" />
+        <label for="subject">Subject</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <textarea id="message" class="form-control glow-input"
+                  placeholder="Message" style="height: 120px" required [(ngModel)]="formData.message" name="message"></textarea>
+        <label for="message">Message</label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn glow-submit-btn px-5 py-2">Send Enquiry</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 🔄 Spinner Overlay -->
+<div class="spinner-overlay" *ngIf="isLoading">
+  <div class="custom-spinner"></div>
+</div>
+
+<!-- ✅ Success Dialog -->
+<div class="popup-overlay" *ngIf="showDialog">
+  <div class="popup-form">
+    <button class="close-btn" (click)="closeDialog()">×</button>
+    <h3 class="text-white text-center mb-3">Thank You!</h3>
+    <p class="text-white text-center">Your enquiry has been submitted successfully.</p>
+  </div>
+</div>
+

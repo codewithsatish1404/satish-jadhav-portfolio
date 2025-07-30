@@ -1,0 +1,161 @@
+<div class="mt-5"></div>
+<section class="hero-section py-5 text-center text-white" id="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Profile Image -->
+      <!-- <div class="col-md-6 mb-4 mb-md-0">
+        <img src="assets/profile.jpg" class="img-fluid rounded-circle border border-light shadow-lg" alt="Profile"
+          width="300">
+      </div> -->
+
+      <!-- Intro Text -->
+      <div class="col-md-12 text-center mt-3">
+        <h1>
+          Hi, I'm <span class="gradient-text">Satish Jadhav</span>
+        </h1>
+
+        <h2 class="display-6 mb-3 role-glow">
+          <span>{{ typedText }}</span><span class="blinking-cursor">|</span>
+        </h2>
+        <p class="lead text-custom">
+          A passionate and detail-oriented developer with 2.8 years of experience in building scalable, responsive, and
+          user-friendly web applications using Angular, Node.js, Express js MongoDB, and DevOps tools.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="expertise-section py-5 text-white" id="expertise" [@fadeIn]>
+  <div class="container">
+    <h2 class="text-center mb-5 display-6 mb-3 role-glow ">Expertise In</h2>
+    <div class="row">
+      <div class="col-md-12 col-lg-6 mb-4" *ngFor="let block of expertiseBlocks">
+        <div class="card bg-grey border-light text-center p-3 h-100 glow-card">
+          <h5 class="mb-3 text-gradient text-uppercase fw-semibold">{{ block.title }}</h5>
+
+          <div class="d-flex flex-wrap justify-content-center mt-3 gap-5">
+            <div *ngFor="let tech of block.techs" class="tech-icon-wrapper text-center">
+
+              <img [src]="tech.logo" [alt]="tech.name" width="40" height="40" [title]="tech.name" class="tech-icon-glow"
+                [ngClass]="{ 'logo-bg-white': tech.name === 'AWS' || tech.name === 'Express.js'|| tech.name === 'GitHub' }">
+              <small class="d-block custom-text mt-3">{{ tech.name }}</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section py-5 text-white" id="projects" [@zoomIn]>
+  <div class="container">
+    <h2 class="text-center mb-5 display-6 mb-3 role-glow">Projects Work</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let project of projects">
+        <div class="card project-card h-100 p-4 d-flex flex-column">
+  <h4 class="text-gradient">{{ project.name }}</h4>
+  <p class="custom-text small mt-2">{{ project.description }}</p>
+
+  <div>
+    <strong class="custom-text">Tech Stack:</strong>
+    <ul class="list-inline mt-2 text-custom">
+      <li class="list-inline-item badge bg-gradient-primary custom-text me-1"
+          *ngFor="let tech of project.technologies">{{ tech }}</li>
+    </ul>
+  </div>
+
+  <div>
+    <strong class="custom-text">Key Achievements:</strong>
+    <ul class="small mt-2">
+      <li *ngFor="let point of project.achievements" class="custom-text">{{ point }}</li>
+    </ul>
+  </div>
+
+  <!-- Buttons always at the bottom -->
+  <div class="mt-auto pt-3 d-flex gap-2 flex-wrap">
+    <a *ngIf="project.demoLink"
+       [href]="project.demoLink"
+       target="_blank"
+       class="btn btn-outline-theme btn-sm">
+      Live Demo
+    </a>
+    <a *ngIf="project.repoLink"
+       [href]="project.repoLink"
+       target="_blank"
+       class="btn btn-outline-theme btn-sm">
+      GitHub Repo
+    </a>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="edu-exp-section py-5 text-white" id="education" [@slideInLeft]>
+  <div class="container">
+    <h2 class="text-center mb-5 display-6 mb-3 role-glow">Education & Experience</h2>
+    <div class="row">
+      <!-- Education -->
+      <div class="col-md-6 mb-4">
+        <div class="card edu-card p-4 h-100">
+          <h4 class="text-gradient">🎓 Education</h4>
+          <div *ngFor="let edu of education" class="mt-3">
+            <h6 class="mb-1 custom-text">{{ edu.degree }}</h6>
+            <p class="small mb-0 custom-text">{{ edu.institution }}</p>
+            <p class="small mb-0 custom-text">{{edu.university}}</p>
+            <p class="custom-text small">{{ edu.duration }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="col-md-6 mb-4">
+        <div class="card exp-card p-4 h-100 custom-text">
+          <h4 class="text-gradient">💼 Experience</h4>
+          <div *ngFor="let exp of experience" class="mt-3">
+            <h6 class="mb-1">{{ exp.role }}</h6>
+            <p class="small mb-0">{{ exp.company }}</p>
+            <p class=" small">{{ exp.duration }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section py-5 text-white text-center" id="contact" [@fadeInDown]>
+  <div class="container">
+    <h2 class="glowing-title mb-4">Let’s Build Something Amazing</h2>
+    <p class="mb-4 fs-5">I'm available for freelance or full-time opportunities. Let’s connect and make it awesome!</p>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-4">
+      <app-contact></app-contact>
+
+      <a href="assets/Satish Jadhav Tech CV.pdf" rel="noopener noreferrer" target="_blank" download
+        class="btn btn-gradient btn-lg px-4">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-section text-white py-4 text-center" @fadeIn>
+  <div class="container">
+    <div class="social-icons mb-3">
+      <a href="https://github.com/codewithsatish1404" target="_blank" class="icon-link"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/satish-jadhav-4105691a1" target="_blank" class="icon-link"><i
+          class="bi bi-linkedin"></i></a>
+      <a href="mailto:satishjadhav3784@example.com?subject=Let%27s%20Connect&body=Hi%20Satish%2C%0A%0AI%20would%20like%20to%20connect%20with%20you."
+        class="icon-link">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+
+    </div>
+
+    <small class="custom-text">© {{ currentYear }} Satish Jadhav.  All rights reserved. | Built with Angular 17 & Bootstrap 5.3.3</small>
+
+  </div>
+</footer>

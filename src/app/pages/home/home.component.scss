@@ -1,0 +1,294 @@
+
+.hero-section {
+  background: #000;
+}
+section{
+  background-color: #000 !important;
+}
+.name-glow {
+  font-weight: bold;
+  color: #fff;
+}
+
+.gradient-text {
+  font-weight: 600;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00d4ff, #9d4edd);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5), 0 0 12px rgba(157, 78, 221, 0.5);
+}
+
+.role-glow {
+  color: #00e5ff;
+  font-weight: 400;
+  opacity: 1;
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+}
+
+.tech-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Fix visibility for Express.js logo */
+.tech-logo.express-fix {
+  background-color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+/* Elegant fix for Express.js white logo */
+.tech-logo.express-glow {
+  background: radial-gradient(circle, #ffffff 30%, transparent 100%);
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.logo-bg-white {
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.expertise-section {
+  background: #000;
+}
+
+.glowing-title {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #00e5ff, 0 0 20px #7f00ff;
+}
+
+.glow-card {
+  border-radius: 1rem;
+  // background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(17,24,39,.5);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.glow-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(127, 0, 255, 0.5);
+}
+
+.projects-section {
+  background: #000;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #7f00ff, #00c3ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text {
+  background-image: linear-gradient(to right, #3b82f6, #a855f7, #14b8a6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  display: inline-block;
+}
+.text-custom{
+  color: #d1d5db;
+}
+.custom-text{
+  color: #9ca3af;
+}
+.edu-exp-section {
+  background: #000;
+}
+
+.edu-card,
+.exp-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.07);
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover,
+.exp-card:hover {
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.3);
+}
+
+.contact-section {
+  background: #000;
+}
+
+
+
+.btn-gradient {
+  color: #6f00ff;
+  border: 2px solid #6f00ff;
+  transition: all 0.3s ease;
+    box-shadow: 0 0 5px #fff, 0 0 10px #00f7ff, 0 0 30px #a855f7;
+
+}
+
+.btn-gradient:hover {
+  color: #fff;
+    background: linear-gradient(135deg, #6f00ff, #00eaff);
+  box-shadow: 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #a855f7;
+  transform: scale(1.03);
+}
+
+.footer-section {
+  background: #000;
+}
+
+.icon-link {
+  font-size: 1.7rem;
+  margin: 0 10px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.icon-link:hover {
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.blinking-cursor {
+  animation: blink 1s infinite;
+  color: #00ffcc;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.glow-btn {
+  position: relative;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 0 5px #fff, 0 0 10px #00f7ff, 0 0 30px #a855f7;
+}
+
+.glow-btn:hover {
+  background: linear-gradient(45deg, #3b82f6, #a855f7, #14b8a6);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 45px #a855f7;
+}
+
+/* Sparkle Animation */
+.sparkle::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+  background-size: 5px 5px;
+  opacity: 0;
+  pointer-events: none;
+  animation: sparkle 0.6s ease-out forwards;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.9) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(30deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5) rotate(60deg);
+  }
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Form Container */
+.popup-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input Styling */
+.glow-input {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glow-input:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 10px #0ea5e9;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.btn-outline-theme {
+  border: 1px solid #0dcaf0;
+  color: #0dcaf0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+}
+
+.btn-outline-theme:hover {
+  background-color: #0dcaf0;
+  color: #fff;
+  box-shadow: 0 0 10px #0dcaf0, 0 0 20px #0dcaf0;
+  text-decoration: none;
+}
